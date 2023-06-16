@@ -27,7 +27,10 @@ your `pluing-name`. Then develope your plugin. Enjoy!
 TEST                          *nvim-plugin-template-nvim-plugin-template-test*
 
 use vusted for test install by using `luarocks --lua-version=5.1 install
-vusted` then run `vusted test` for your test cases
+vusted` then run `vusted test` for your test cases.
+
+create test case in test folder file rule is `foo_spec.lua` with `_spec` more
+usage please check busted usage <https://lunarmodules.github.io/busted/>
 
 
 CI                              *nvim-plugin-template-nvim-plugin-template-ci*
