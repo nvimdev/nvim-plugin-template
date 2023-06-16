@@ -9,7 +9,10 @@ terminal then cd plugin directory , run `python3 rename.py your-plugin-name` thi
 
 ## Test
 use vusted for test install by using `luarocks --lua-version=5.1 install vusted` then run `vusted test`
-for your test cases
+for your test cases.
+
+create test case in test folder file rule is `foo_spec.lua` with `_spec` more usage please check
+[busted usage](https://lunarmodules.github.io/busted/)
 
 ## Ci
 Ci support auto generate doc from README and integration test.
