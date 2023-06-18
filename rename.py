@@ -3,9 +3,11 @@
 
 import os, sys
 
+pdir = os.getcwd()
+
 if len(sys.argv) == 2:
     new_name = sys.argv[1]
-    for dir in os.listdir(os.getcwd()):
+    for dir in os.listdir(pdir):
         if dir == "lua":
             os.rename(os.path.join("lua", "nvim-plugin-template"), os.path.join("lua",new_name))
         if dir == "plugin":
@@ -20,5 +22,13 @@ if len(sys.argv) == 2:
                 t = d.replace('nvim-plugin-template', new_name)
                 f.seek(0, 0)
                 f.write(t)
+
+    choice = input("Do you want also remove example code in init.lua and test (y|n): ")
+    if choice.lower() == 'y':
+        with open(os.path.join(pdir, 'lua','nvim-plugin-template','init.lua'), 'w') as f:
+            f.truncate()
+
+        with open(os.path.join(pdir, 'test','plugin_spec.lua'), 'w') as f:
+            f.truncate()
 
     os.remove(os.path.join(os.getcwd(), 'rename.py'))

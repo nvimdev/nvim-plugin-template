@@ -1,5 +1,8 @@
+local example = require('nvim-plugin-template').example
+
 describe('neovim plugin', function()
   it('work as expect', function()
-    assert.is_true(true)
+    local result = example()
+    assert.is_true(result)
   end)
 end)

@@ -3,9 +3,15 @@ neovim plugin template integration test and doc publish
 
 ## Usage
 
-click `use this template` button generate a repo on your github. then clone your plugin repo.open 
-terminal then cd plugin directory , run `python3 rename.py your-plugin-name` this will replace all
-`nvim-plugin-template` to your `pluing-name`. Then develope your plugin. Enjoy!
+1. click `use this template` button generate a repo on your github.
+2. clone your plugin repo.open terminal then cd plugin directory.
+3. run `python3 rename.py your-plugin-name` this will replace all `nvim-plugin-template` to your `pluing-name`. 
+   then it will prompt you input `y` or `n` to remove example codes in `init.lua` and
+   `test/plugin_spec.lua`. if you are familiar this repo just input y. if you are first look at this
+   template I suggest you look at them first. after these step the `rename.py` will also auto
+   remove.
+
+now you have a clean plugin env . enjoy!
 
 ## Format
 
