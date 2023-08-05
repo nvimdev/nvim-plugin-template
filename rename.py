@@ -25,7 +25,7 @@ if len(sys.argv) == 2:
 
     choice = input("Do you want also remove example code in init.lua and test (y|n): ")
     if choice.lower() == 'y':
-        with open(os.path.join(pdir, 'lua','nvim-plugin-template','init.lua'), 'w') as f:
+        with open(os.path.join(pdir, 'lua',new_name,'init.lua'), 'w') as f:
             f.truncate()
 
         with open(os.path.join(pdir, 'test','plugin_spec.lua'), 'w') as f:
