@@ -1,34 +1,39 @@
 # nvim-plugin-template
-neovim plugin template integration test and doc publish
+
+Neovim plugin template; includes automatic documentation generation from README, integration tests with Busted, and linting with Stylua
 
 ## Usage
 
-1. click `use this template` button generate a repo on your github.
-2. clone your plugin repo.open terminal then cd plugin directory.
-3. run `python3 rename.py your-plugin-name` this will replace all `nvim-plugin-template` to your `pluing-name`. 
-   then it will prompt you input `y` or `n` to remove example codes in `init.lua` and
-   `test/plugin_spec.lua`. if you are familiar this repo just input y. if you are first look at this
-   template I suggest you look at them first. after these step the `rename.py` will also auto
+1. Click `use this template` button generate a repo on your github.
+2. Clone your plugin repo. Open terminal then cd plugin directory.
+3. Run `python3 rename.py your-plugin-name`. This will replace all `nvim-plugin-template` to your `plugin-name`. 
+   Then it will prompt you input `y` or `n` to remove example codes in `init.lua` and
+   `test/plugin_spec.lua`. If you are familiar this repo just input `y`. If you are looking at this template for the first time I suggest you inspect the contents. After this step `rename.py` will also auto
    remove.
 
-now you have a clean plugin env . enjoy!
+Now you have a clean plugin environment. Enjoy!
 
 ## Format
 
-format use `stylua` and provide `.stylua.toml`.
+The CI uses `stylua` to format the code; customize the formatting by editing `.stylua.toml`.
 
 ## Test
-use vusted for test install by using `luarocks --lua-version=5.1 install vusted` then run `vusted test`
-for your test cases.
 
-create test case in test folder file rule is `foo_spec.lua` with `_spec` more usage please check
+Uses [busted](https://lunarmodules.github.io/busted/) for testing. Installs by using `luarocks --lua-version=5.1 install vusted` then runs `vusted ./test`
+for your test cases. `vusted` is a wrapper of Busted especially for testing Neovim plugins.
+
+Create test cases in the `test` folder. Busted expects files in this directory to be named `foo_spec.lua`, with `_spec` as a suffix before the `.lua` file extension. For more usage details please check
 [busted usage](https://lunarmodules.github.io/busted/)
 
-## Ci
-Ci support auto generate doc from README and integration test and lint check by `stylua`.
+## CI
+
+- Auto generates doc from README.
+- Runs the Busted/vusted integration tests
+- Lints with `stylua`.
 
 
 ## More
-Other usage you can look at my plugins
+
+To see this template in action, take a look at my other plugins.
 
 ## License MIT
