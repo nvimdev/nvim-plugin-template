@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-import os, sys
+import os, sys, shutil
 pdir = os.getcwd()
 
 # ANSI color codes
@@ -42,7 +42,7 @@ for dir in os.listdir(pdir):
 
 choice = input("Do you need plugin folder in your plugin (y|n): ")
 if choice.lower() == 'n':
-    os.remove(os.path.join(os.getcwd(), 'plugin'))
+    shutil.rmtree(os.path.join(os.getcwd(), 'plugin'))
 
 choice = input("Do you want also remove example code in init.lua and test (y|n): ")
 if choice.lower() == 'y':
